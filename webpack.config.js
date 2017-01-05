@@ -1,23 +1,30 @@
 module.exports = {
-  entry: './main.js',
+  entry: './src/index.jsx',
   output: {
     path: './',
-    filename: 'index.js'
+    filename: 'bundle.js',
   },
   devServer: {
     inline: true,
-    port: 7777
+    port: 7777,
   },
-  module:{
-    loaders:[
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.scss'],
+  },
+  module: {
+    loaders: [
       {
-        test: /\.js$/,
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel',
         query: {
-          presets: ['es2015', 'react']
-        }
-      }
-    ]
-  }
-}
+          presets: ['es2015', 'react'],
+        },
+      },
+    ],
+  },
+};
