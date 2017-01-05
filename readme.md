@@ -1,5 +1,12 @@
 #Readme
 
-> Code about to my new website tha should replace the old one
+> Basic scaffold to start a project fron 0 without any reject, all is what you see
 
-Will be served at [www.jimeno0.com](http://jimeno0.com/)
+* Includes sass and linter
+1. Clone repo
+2. Run `npm install`
+3. Run `npm run start` to build the server and start to work
+
+* _How to build yourself one and the old basic template inside `ultra_basic`_
+
+
